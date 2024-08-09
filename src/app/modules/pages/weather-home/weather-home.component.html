@@ -1,0 +1,19 @@
+<div class="search">
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="city"
+      id="city"
+      placeholder="Localizar Endereço"
+      [(ngModel)]="initialCity"
+    />
+    <span (click)="onSubmit()"
+      ><fa-icon [icon]="searhIcon" size="lg" class="search-icon"></fa-icon
+    ></span>
+  </form>
+</div>
+
+<app-weather-card
+  *ngIf="weatherData"
+  [weatherData]="weatherData"
+></app-weather-card>

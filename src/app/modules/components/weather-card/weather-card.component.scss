@@ -1,0 +1,74 @@
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 3, 0.2);
+
+  .image {
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 3, 0.2);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        color: #fff;
+        z-index: 1;
+        font-size: 0.9rem;
+      }
+      h2 {
+        color: #fff;
+        z-index: 1;
+        font-size: 2.7rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      opacity: 0.7;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    h3 {
+      color: #fff;
+    }
+
+    .temperature-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

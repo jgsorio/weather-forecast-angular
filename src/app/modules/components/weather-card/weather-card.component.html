@@ -1,0 +1,69 @@
+<div class="weather-info" *ngIf="weatherData">
+  <div class="image">
+    <div class="overlay">
+      <h3>{{ weatherData.name }}</h3>
+      <h2>{{ weatherData.main.temp | number : "1.0-0" }}°C</h2>
+    </div>
+    <img
+      src="../../../../assets/images/hot-weather.jpg"
+      alt="Hot Temperature"
+      *ngIf="weatherData.main.temp >= 30"
+    />
+    <img
+      src="../../../../assets/images/cold-weather.jpg"
+      alt="Cold Temperature"
+      *ngIf="weatherData.main.temp <= 13"
+    />
+    <img
+      src="../../../../assets/images/spring-weather.jpg"
+      alt="Normal Temperature"
+      *ngIf="weatherData.main.temp > 20 && weatherData.main.temp < 30"
+    />
+    <img
+      src="../../../../assets/images/autumn-weather.jpg"
+      alt="Sunny Temperature"
+      *ngIf="weatherData.main.temp >= 13 && weatherData.main.temp < 20"
+    />
+  </div>
+  <div class="info">
+    <h3>Mais informações</h3>
+    <div class="temperature-info">
+      <div>
+        <fa-icon
+          [icon]="minTemperatureIcon"
+          size="lg"
+          class="temperature-icon"
+          style="color: #fff"
+        ></fa-icon>
+        <p>{{ weatherData.main.temp_min | number : "1.0-0" }}°C</p>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="maxTemperatureIcon"
+          size="lg"
+          class="temperature-icon"
+          style="color: #fff"
+        ></fa-icon>
+        <p>{{ weatherData.main.temp_max | number : "1.0-0" }}°C</p>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="humidityIcon"
+          size="lg"
+          class="temperature-icon"
+          style="color: #fff"
+        ></fa-icon>
+        <p>{{ weatherData.main.humidity }}%</p>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="windIcon"
+          size="lg"
+          class="temperature-icon"
+          style="color: #fff"
+        ></fa-icon>
+        <p>{{ weatherData.wind.speed }} km/h</p>
+      </div>
+    </div>
+  </div>
+</div>

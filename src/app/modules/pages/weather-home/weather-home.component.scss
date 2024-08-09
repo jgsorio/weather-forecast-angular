@@ -1,0 +1,25 @@
+.search {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 1.5rem;
+}
+
+.search-icon {
+  color: #ddd;
+  cursor: pointer;
+  margin-left: 10px;
+}

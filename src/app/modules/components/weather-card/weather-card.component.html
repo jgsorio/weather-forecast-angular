@@ -5,22 +5,22 @@
       <h2>{{ weatherData.main.temp | number : "1.0-0" }}°C</h2>
     </div>
     <img
-      src="../../../../assets/images/hot-weather.jpg"
+      src="./assets/images/hot-weather.jpg"
       alt="Hot Temperature"
       *ngIf="weatherData.main.temp >= 30"
     />
     <img
-      src="../../../../assets/images/cold-weather.jpg"
+      src="./assets/images/cold-weather.jpg"
       alt="Cold Temperature"
       *ngIf="weatherData.main.temp <= 13"
     />
     <img
-      src="../../../../assets/images/spring-weather.jpg"
+      src="./assets/images/spring-weather.jpg"
       alt="Normal Temperature"
       *ngIf="weatherData.main.temp > 20 && weatherData.main.temp < 30"
     />
     <img
-      src="../../../../assets/images/autumn-weather.jpg"
+      src="./assets/images/autumn-weather.jpg"
       alt="Sunny Temperature"
       *ngIf="weatherData.main.temp >= 13 && weatherData.main.temp < 20"
     />
